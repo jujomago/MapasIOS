@@ -97,6 +97,14 @@
 					E710561B1BF1B05B00E64DB6 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 58U982N3G3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
