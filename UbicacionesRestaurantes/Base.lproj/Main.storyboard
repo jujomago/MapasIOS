@@ -1,41 +1,142 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jq9-Vf-sZj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Restaurantes de Tarija-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UbicacionesRestaurantes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="EPN-fx-GQC"/>
+                        <viewControllerLayoutGuide type="bottom" id="x6M-L9-x8j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7sw-9f-i3q">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5u-SV-tNW">
+                                <rect key="frame" x="73" y="518" width="175" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.49218468928244641" blue="0.36957746131154179" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8pt-oD-op0"/>
+                                    <constraint firstAttribute="width" constant="175" id="fs0-Io-fib"/>
+                                </constraints>
+                                <state key="normal" title="Encontrar Ruta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8pt-oD-op0"/>
+                                        <exclude reference="fs0-Io-fib"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="119" y="557" width="175" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="8pt-oD-op0"/>
+                                        <include reference="fs0-Io-fib"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="encontrarRuta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gJ-Sd-OPz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LUGAR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-eg-JM8">
+                                <rect key="frame" x="2" y="444" width="263" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.49218468929999998" blue="0.36957746130000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="14" y="480" width="263" height="22"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXn-pY-fpc">
+                                <rect key="frame" x="2" y="474" width="307" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="40" y="516" width="333" height="21"/>
+                                </variation>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7sw-9f-i3q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="7sw-9f-i3q" secondAttribute="trailing" id="EJF-3W-fq3"/>
-                            <constraint firstItem="7sw-9f-i3q" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="R6I-sJ-PrJ"/>
-                            <constraint firstItem="7sw-9f-i3q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hfQ-Is-XB2"/>
-                            <constraint firstItem="7sw-9f-i3q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ilk-Wx-7xR"/>
+                            <constraint firstItem="UXn-pY-fpc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ANh-ud-wxu"/>
+                            <constraint firstItem="UXn-pY-fpc" firstAttribute="top" secondItem="Ib7-eg-JM8" secondAttribute="bottom" constant="14" id="EI5-q7-5CM"/>
+                            <constraint firstItem="G5u-SV-tNW" firstAttribute="top" secondItem="UXn-pY-fpc" secondAttribute="bottom" constant="20" id="SOD-3K-cTz"/>
+                            <constraint firstItem="x6M-L9-x8j" firstAttribute="top" secondItem="7sw-9f-i3q" secondAttribute="bottom" constant="134" id="SeI-4b-DUJ"/>
+                            <constraint firstItem="x6M-L9-x8j" firstAttribute="top" secondItem="G5u-SV-tNW" secondAttribute="bottom" constant="13" id="XOY-GY-oro"/>
+                            <constraint firstItem="G5u-SV-tNW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQy-YA-Buy"/>
+                            <constraint firstItem="Ib7-eg-JM8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="iU9-nV-m0c"/>
+                            <constraint firstAttribute="trailing" secondItem="7sw-9f-i3q" secondAttribute="trailing" id="oQ8-g4-ltl"/>
+                            <constraint firstItem="7sw-9f-i3q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uc9-aM-hHH"/>
+                            <constraint firstItem="7sw-9f-i3q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yqJ-SQ-NoD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oQ8-g4-ltl"/>
+                                <exclude reference="uc9-aM-hHH"/>
+                                <exclude reference="yqJ-SQ-NoD"/>
+                                <exclude reference="iU9-nV-m0c"/>
+                                <exclude reference="ANh-ud-wxu"/>
+                                <exclude reference="EI5-q7-5CM"/>
+                                <exclude reference="SOD-3K-cTz"/>
+                                <exclude reference="YQy-YA-Buy"/>
+                                <exclude reference="SeI-4b-DUJ"/>
+                                <exclude reference="XOY-GY-oro"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="oQ8-g4-ltl"/>
+                                <include reference="uc9-aM-hHH"/>
+                                <include reference="yqJ-SQ-NoD"/>
+                                <include reference="iU9-nV-m0c"/>
+                                <include reference="ANh-ud-wxu"/>
+                                <include reference="EI5-q7-5CM"/>
+                                <include reference="SOD-3K-cTz"/>
+                                <include reference="YQy-YA-Buy"/>
+                                <include reference="SeI-4b-DUJ"/>
+                                <include reference="XOY-GY-oro"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Restaurantes de Tarija" id="Xe1-Gj-tAU"/>
                     <connections>
+                        <outlet property="labelTitulo" destination="UXn-pY-fpc" id="KiM-zj-ijT"/>
                         <outlet property="mapView" destination="7sw-9f-i3q" id="1zh-iz-Xhb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="352"/>
+            <point key="canvasLocation" x="1353" y="350"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rXg-bK-2Eh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jq9-Vf-sZj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eye-uC-lyb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Byv-Zy-YHX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeL-da-sYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="351.75"/>
         </scene>
     </scenes>
 </document>
